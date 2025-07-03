@@ -17,3 +17,32 @@ int main()
     
     return 0; // O(1)
 }
+
+// for(int i=1;i*i<=N;i++) -> O(sqrt(N))
+
+    // for(int i=0;i<n;i++) // O(N)
+    // {
+    //     int j=0;
+    //     while(j*j<n) // O(sqrt(N))
+    //     {
+    //         i+j;
+    //         j++;
+    //     }
+    // }
+
+    // O(N * sqrt(N))
+
+
+    // for(int i=0;i*i<n;i++)
+    // {
+    //     sum += i;
+    // }
+
+
+    // for(int i=0;i<n;i++)
+    // {
+    //     sum += i;
+    //     i*=k;
+    // }
+
+    // O(sqrt(N))

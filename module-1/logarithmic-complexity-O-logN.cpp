@@ -17,3 +17,5 @@ int main()
     
     return 0; // O(1)
 }
+
+//for(int i=0;i<N/2;i++) -> O(log(N))
