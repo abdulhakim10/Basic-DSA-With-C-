@@ -2,4 +2,4 @@
 /output
 *.exe
 *.bin
-*.cph
+/.cph
