@@ -21,36 +21,40 @@ void insert_at_tail(Node* &head, Node* &tail, int val)
     {
         head = newnode;
         tail = newnode;
-        return;
     }
     tail->next = newnode;
-    tail = tail->next;
-    
-    
+    tail = newnode; // tail = tail->next same
 }
 
-void print_linked_list(Node* head)
+// recursion
+void print_reverse(Node* temp)
 {
-    Node* temp = head;
-    while (temp != NULL)
+    // base case
+    if(temp == NULL)
     {
-        cout << temp->val << endl;
-        temp = temp->next;
+        return;
     }
+
+    print_reverse(temp->next);
+    cout << temp->val << " ";
 }
 
 int main()
 {
-    // Node* head = NULL;
-    Node* head = new Node(10);
-    Node* a = new Node(20);
-    Node* tail = new Node(30);
+    Node* head = NULL;
+    Node* tail = NULL;
 
-    head->next = a;
-    a->next = tail;
-
-    insert_at_tail(head, tail, 40);
-    insert_at_tail(head,tail, 50);
-    print_linked_list(head);
+    int val;
+    while (true)
+    {
+        cin >> val;
+        if(val == -1)
+        {
+            break;
+        }
+        insert_at_tail(head, tail, val);
+    }
+    print_reverse(head);
+    
     return 0;
 }
